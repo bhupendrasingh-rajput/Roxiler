@@ -74,7 +74,7 @@ const Dashboard = () => {
           </tr>
         </thead>
         <tbody>
-          {products.length !== 0 ? products.map((product) =>
+          {products.length !== 0 ? (products).map((product) =>
             <tr key={product._id}>
               <td id='id'>{product.id}</td>
               <td id='title'>{product.title}</td>
