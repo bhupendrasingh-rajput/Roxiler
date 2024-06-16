@@ -1,0 +1,11 @@
+.barchart {
+    display: grid;
+    place-items: center;
+    row-gap: 5vh;
+    padding: 2rem;
+}
+
+.bar_chart_box {
+    width: 50vw;
+    height: 60vh;
+}

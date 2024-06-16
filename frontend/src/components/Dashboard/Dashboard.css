@@ -1,0 +1,127 @@
+.dashboard {
+    height: 90vh;
+    width: 100vw;
+    padding: 0.5rem;
+    row-gap: 1vh;
+    display: grid;
+    place-items: center;
+    font-size: small;
+}
+
+header {
+    display: grid;
+    place-items: center;
+    background-color: white;
+    width: 9vw;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    font-weight: 600;
+}
+
+.filterBox {
+    width: 90vw;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 1vw;
+    margin-bottom: 3vh;
+}
+
+.searchbox {
+    height: 6vh;
+    width: 20vw;
+    outline: none;
+    border: none;
+    border-radius: 1.5rem;
+    padding-inline: 1vw;
+    background-color: #ffe08ce4;
+}
+
+.monthBox {
+    width: 15vw;
+}
+
+::placeholder {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.793);
+}
+
+table {
+    background-color: #ffe08ce4;
+    width: 90vw;
+    border-collapse: collapse;
+    border-radius: 2rem;
+}
+
+th,
+td {
+    padding: 0.5vw 0.5vh;
+    border: 2px solid black;
+}
+
+thead {
+    height: 6vh;
+}
+
+th:first-child,
+td:first-child {
+    border-left: none;
+}
+
+th:last-child,
+td:last-child {
+    border-right: none;
+}
+
+th {
+    border-top: none;
+    border-bottom: none;
+}
+
+td {
+    border-bottom: none;
+}
+
+
+#id,
+#sold,
+#price {
+    width: 5vw;
+}
+
+#title {
+    width: 20vw;
+}
+
+
+#desc {
+    max-width: 35vw;
+}
+
+#category {
+    width: 10vw;
+}
+
+#image {
+    position: relative;
+    width: 15vw;
+}
+
+img {
+    object-fit: fill;
+    width: 80%;
+    aspect-ratio: 2;
+}
+
+footer {
+    width: 80vw;
+    height: 6vh;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2vh;
+}
+
+span {
+    cursor: pointer;
+}
