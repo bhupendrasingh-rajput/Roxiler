@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const { seedDatabase } = require('../controller/product.controller')
 
 const connectDB = () => {
-    mongoose.connect('mongodb+srv://admin:admin@personalproject.0bjvgqm.mongodb.net/Roxiler')
+    mongoose.connect(process.env.MONGO_URI)
         .then(() => {
             console.log('Database Connected Successfully..!');
             seedDatabase();
