@@ -111,13 +111,13 @@ const getCombinedData = async (req, res) => {
         if (!month) { return res.status(400).json({ message: 'Value for month not found!' }) }
 
 
-        const statsResponse = await fetch(`http://localhost:5000/api/products/stats?month=${month}`)
+        const statsResponse = await fetch(`${process.env.BACKEND_URL}/api/products/stats?month=${month}`)
             .then(data => data.json()).catch(err => err);
 
-        const barChartDataResponse = await fetch(`http://localhost:5000/api/products/bar-chart?month=${month}`)
+        const barChartDataResponse = await fetch(`${process.env.BACKEND_URL}/api/products/bar-chart?month=${month}`)
             .then(data => data.json()).catch(err => err);
 
-        const pieChartDataResponse = await fetch(`http://localhost:5000/api/products/pie-chart?month=${month}`)
+        const pieChartDataResponse = await fetch(`${process.env.BACKEND_URL}/api/products/pie-chart?month=${month}`)
             .then(data => data.json()).catch(err => err);
 
         res.json({ statsResponse, barChartDataResponse, pieChartDataResponse });
