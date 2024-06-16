@@ -9,7 +9,7 @@ const Stats = () => {
   const [statsData, setStatsData] = useState();
   const fetchStats = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/products/stats?month=${month.value}`);
+      const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/products/stats?month=${month.value}`);
       setStatsData(response.data);
       console.log(response.data);
     } catch (err) {

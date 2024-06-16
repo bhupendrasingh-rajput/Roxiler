@@ -19,7 +19,7 @@ const Dashboard = () => {
         search: search || '',
         month: month || '',
       })
-      const response = await axios.get(`http://localhost:5000/api/products/all?${params.toString()}`);
+      const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/products/all?${params.toString()}`);
       setProducts(response.data);
     } catch (err) {
       console.log(err);

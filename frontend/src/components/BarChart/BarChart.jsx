@@ -13,9 +13,9 @@ const BarChart = () => {
 
   const fetchChartData = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/products/bar-chart?month=${month.value}`);
+      const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/products/bar-chart?month=${month.value}`);
       const dataArray = Object.entries(response.data).map((entry, index) => ({ 'range': entry[0], 'items': entry[1] }));
-      setBarChartData({ data: [...dataArray], series: [{ type: 'bar', xKey: 'range', yKey: 'items', fill :'cyan'}] });
+      setBarChartData({ data: [...dataArray], series: [{ type: 'bar', xKey: 'range', yKey: 'items', fill: 'cyan' }] });
     } catch (err) {
       console.log(err);
     }
